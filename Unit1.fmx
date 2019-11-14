@@ -1,0 +1,283 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ToolBar1: TToolBar
+    Size.Width = 640.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object Button1: TButton
+      Align = Left
+      Size.Width = 80.000000000000000000
+      Size.Height = 40.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'drawertoolbuttonbordered'
+      TabOrder = 0
+      Text = 'Button1'
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnClick = Layout1Click
+    object edtNome_layout1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 88.000000000000000000
+      Position.Y = 64.000000000000000000
+    end
+    object edtSalario_layout1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Position.X = 88.000000000000000000
+      Position.Y = 112.000000000000000000
+    end
+    object edtTempoServico_layout1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 88.000000000000000000
+      Position.Y = 160.000000000000000000
+    end
+    object edtDependentes_layout1: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 88.000000000000000000
+      Position.Y = 208.000000000000000000
+    end
+    object Label1: TLabel
+      Position.X = 88.000000000000000000
+      Position.Y = 40.000000000000000000
+      Text = 'Nome do funcion'#225'rio'
+      TabOrder = 7
+    end
+    object Label2: TLabel
+      Position.X = 88.000000000000000000
+      Position.Y = 88.000000000000000000
+      Text = 'Sal'#225'rio Base'
+      TabOrder = 6
+    end
+    object Label3: TLabel
+      Position.X = 88.000000000000000000
+      Position.Y = 136.000000000000000000
+      Size.Width = 184.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Tempo de servi'#231'o (em anos)'
+      TabOrder = 5
+    end
+    object Label4: TLabel
+      Position.X = 88.000000000000000000
+      Position.Y = 184.000000000000000000
+      Size.Width = 153.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'N'#250'mero de dependentes'
+      TabOrder = 4
+    end
+  end
+  object Layout2: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 3
+    OnClick = Layout2Click
+    object edtFixo_layout2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 160.000000000000000000
+      Position.Y = 88.000000000000000000
+    end
+    object edtAdicional_layout2: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 160.000000000000000000
+      Position.Y = 152.000000000000000000
+    end
+    object Label5: TLabel
+      Position.X = 160.000000000000000000
+      Position.Y = 64.000000000000000000
+      Text = 'FIxo por dependentes'
+      TabOrder = 3
+    end
+    object Label6: TLabel
+      Position.X = 160.000000000000000000
+      Position.Y = 128.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Adicional por tempo de servi'#231'o'
+      TabOrder = 2
+    end
+    object GroupBox1: TGroupBox
+      Position.X = 152.000000000000000000
+      Position.Y = 200.000000000000000000
+      Size.Width = 185.000000000000000000
+      Size.Height = 145.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Adicional cargo'
+      TabOrder = 4
+      object RadioButton1: TRadioButton
+        Position.X = 8.000000000000000000
+        Position.Y = 24.000000000000000000
+        TabOrder = 0
+        Text = '5%'
+      end
+      object RadioButton2: TRadioButton
+        Position.X = 8.000000000000000000
+        Position.Y = 48.000000000000000000
+        TabOrder = 1
+        Text = '10%'
+      end
+      object RadioButton3: TRadioButton
+        Position.X = 8.000000000000000000
+        Position.Y = 72.000000000000000000
+        TabOrder = 2
+        Text = '15%'
+      end
+      object RadioButton4: TRadioButton
+        Position.X = 8.000000000000000000
+        Position.Y = 96.000000000000000000
+        TabOrder = 3
+        Text = '20%'
+      end
+    end
+  end
+  object Layout3: TLayout
+    Align = Client
+    Size.Width = 640.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 4
+    OnClick = Layout3Click
+    object edtResult_dependentes: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 3
+      Position.X = 80.000000000000000000
+      Position.Y = 80.000000000000000000
+      Enabled = False
+    end
+    object edtResult_TempoServico: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 2
+      Position.X = 80.000000000000000000
+      Position.Y = 136.000000000000000000
+      Enabled = False
+    end
+    object edtResult_Cargo: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 1
+      Position.X = 80.000000000000000000
+      Position.Y = 176.000000000000000000
+      Enabled = False
+    end
+    object edtResult_Total: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 0
+      Position.X = 80.000000000000000000
+      Position.Y = 224.000000000000000000
+      Enabled = False
+    end
+    object Label7: TLabel
+      Position.X = 80.000000000000000000
+      Position.Y = 56.000000000000000000
+      Text = 'Dependentes'
+      TabOrder = 7
+    end
+    object Label8: TLabel
+      Position.X = 80.000000000000000000
+      Position.Y = 112.000000000000000000
+      Text = 'Tempo de Servi'#231'o'
+      TabOrder = 6
+    end
+    object Label9: TLabel
+      Position.X = 80.000000000000000000
+      Position.Y = 160.000000000000000000
+      Text = 'Cargo'
+      TabOrder = 5
+    end
+    object Label10: TLabel
+      Position.X = 80.000000000000000000
+      Position.Y = 200.000000000000000000
+      Text = 'Total'
+      TabOrder = 4
+    end
+    object GroupBox2: TGroupBox
+      Position.X = 88.000000000000000000
+      Position.Y = 288.000000000000000000
+      Size.Width = 377.000000000000000000
+      Size.Height = 73.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Funcionario/Sal'#225'rio'
+      TabOrder = 8
+      object lblResut: TLabel
+        Position.X = 24.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 233.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+      end
+    end
+    object Button2: TButton
+      Position.X = 376.000000000000000000
+      Position.Y = 376.000000000000000000
+      TabOrder = 9
+      Text = 'Novo Calculo'
+      OnClick = Button2Click
+    end
+  end
+  object MultiView1: TMultiView
+    TargetControl = Layout1
+    MasterButton = Button1
+    Mode = Drawer
+    NavigationPaneOptions.CollapsedWidth = 113.000000000000000000
+    Size.Width = 121.000000000000000000
+    Size.Height = 440.000000000000000000
+    Size.PlatformDefault = False
+    Visible = False
+    TabOrder = 1
+    object ListBox1: TListBox
+      Align = Client
+      Size.Width = 121.000000000000000000
+      Size.Height = 440.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      Viewport.Width = 117.000000000000000000
+      Viewport.Height = 436.000000000000000000
+      object ListBoxItem1: TListBoxItem
+        TabOrder = 0
+        Text = 'Dados Basicos'
+        OnClick = ListBoxItem1Click
+      end
+      object ListBoxItem2: TListBoxItem
+        Position.Y = 19.000000000000000000
+        TabOrder = 1
+        Text = 'Dados de Calculos'
+        OnClick = ListBoxItem2Click
+      end
+      object ListBoxItem3: TListBoxItem
+        Position.Y = 38.000000000000000000
+        TabOrder = 2
+        Text = 'Valores calculados'
+        OnClick = ListBoxItem3Click
+      end
+    end
+  end
+end
